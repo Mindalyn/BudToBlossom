@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bud to Blossom</title>
+  <link rel="stylesheet" href="signup.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    function create() {
+      var p1 = document.getElementById("uname");
+      var p2 = document.getElementById("pword");
+      var p3 = document.getElementById("pword2");
+      var error = document.getElementById("errormess")
+      console.log(p2.value == p3.value);
+      if(p2.value == p3.value) {
+        if(p2.value.length < 6) {
+          error.innerHTML = "password is shorter than six characters";
+        } else {
+          $.get("/validate/signup", {uname: p1.value, pword: p2.value}, function(data) {
+            if(data == "valid") {
+              window.location.href = "landing";
+            } else {
+              error.innerHTML = data;
+            }
+          });
+        }
+      } else {
+        error.innerHTML = "two passwords should match";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="pagebody">
+    <h1>bud to blossom</h1>
+      <p class="tlabel">username:</p>
+     <input type="text" id="uname" name="username">
+     <p class="tlabel">set password:</p>
+     <p class="tlabel">(six character minimum)</p>
+     <input type="password" id="pword" name="password">
+     <p class="tlabel">verify password:</p>
+     <input type="password" id="pword2" name="password">
+     <button tag="button" id="create" onclick="create()">create account</button>
+     <h3 id="errormess"></h3>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+@font-face {
+  font-family: webfont;
+  src: url("imgs/fonts/PrintBold_TT.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#header {
+  height: 80px;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+#pagebody {
+  background: linear-gradient(#6D3491, #EFEDBD);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+#headerlogo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 20px;
+  display: inline;
+  margin-right: 0px;
+}
+
+#pages {
+  color: dimgray;
+  list-style: none;
+  font-family: webfont;
+  font-size: 25px;
+  display: inline;
+  padding-left: 10px;
+}
+
+#pages li {
+  display: inline;
+  margin-right: 20px;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages li a {
+  color: dimgray;
+  text-decoration: none;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages li a:hover {
+  color: black;
+}
+
+#pages #etheader{
+  color: black;
+}
+
+#logout {
+  float: right;
+}
+
+h1 {
+  text-align: center;
+  font-family: webfont;
+  color: white;
+  font-size: 50px;
+}
+
+.emolist {
+  display: block;
+}
+
+.emolist li {
+  display: inline;
+}
+
+.emolist img {
+  padding: 10px;
+  width: 20%;
+}
+
+.dimemotion {
+  filter: brightness(50%);
+}
+
+.brightemotion {
+  filter: brightness(100%);
+}
+
+#next {
+  margin-top: 20px;
+  font-size: 24px;
+  background-color: seagreen;
+  color: white;
+  border-radius: 12px;
+  height: 30px;
+  width: 80px;
+  font-family: webfont;
+  display: block;
+  margin: 30px auto;
+}
+
+#listdiv {
+  width: 80%;
+  margin: auto;
+}

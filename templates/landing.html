@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bud to Blossom</title>
+  <link rel="stylesheet" href="landing.css" />
+  <script>
+    function log() {
+      window.location.href = "tracker";
+    }
+
+    function cal() {
+      window.location.href = "calendar";
+    }
+
+    function jungle() {
+      window.location.href = "jungle";
+    }
+  </script>
+</head>
+<body>
+  <div id="pagebody">
+    <h1>hi, {{name}}</h1>
+    <h3>{{message}}</h3>
+    <div id="middlediv">
+     <button tag="button" id="login" onclick="log()">log emotions</button>
+     <button tag="button" id="create" onclick="cal()">calendar</button>
+     <button tag="button" id="create" onclick="jungle()">jungle</button>
+   </div>
+  </div>
+</body>
+</html>

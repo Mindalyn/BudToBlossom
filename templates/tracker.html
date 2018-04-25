@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tracker</title>
+  <link rel="stylesheet" href="tracker.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    function change(img) {
+      if(img.className == "dimemotion") {
+        img.className = "brightemotion";
+      } else {
+        img.className = "dimemotion";
+      }
+    }
+
+    function submit() {
+      var x = document.getElementsByClassName("brightemotion");
+      var emotions = [];
+      for(var a = 0; a < x.length; a++) {
+        emotions.push(x[a].alt);
+      }
+      $.get("validate/addmoods", {moods: emotions}, function(data) {
+        window.location.href = "log";
+      });
+    }
+
+
+  </script>
+</head>
+<body>
+  <div id="header">
+    <img src="imgs/misc/logo.png" alt="blossom logo" id="headerlogo">
+    <ul id="pages">
+      <li id="calheader"><a href="calendar">calendar</a></li>
+      <li id="etheader"><a href="tracker">emotion tracker</a></li>
+      <li id="yjheader"><a href="jungle">your jungle</a></li>
+      <li id="logout"><a href="logout">logout</a></li>
+    </ul>
+  </div>
+  <div id="pagebody">
+    <h1>how do you feel right now?</h1>
+    <div id ="listdiv">
+    <ul id="em1" class="emolist">
+      <li><img src="imgs/ems/happy.png" alt="happy" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/sad.png" alt="sad" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/angry.png" alt="angry" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/content.png" alt="content" class="dimemotion" onclick="change(this)"></li>
+    </ul>
+    <ul id="em2" class="emolist">
+      <li><img src="imgs/ems/annoyed.png" alt="annoyed" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/excited.png" alt="excited" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/fearful.png" alt="fearful" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/hurt.png" alt="hurt" class="dimemotion" onclick="change(this)"></li>
+    </ul>
+    <ul id="em2" class="emolist">
+      <li><img src="imgs/ems/nervous.png" alt="nervous" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/surprised.png" alt="surprised" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/lonely.png" alt="lonely" class="dimemotion" onclick="change(this)"></li>
+      <li><img src="imgs/ems/worried.png" alt="worried" class="dimemotion" onclick="change(this)"></li>
+    </ul>
+  </div>
+    <button tag="button" id="next" onclick="submit()">next</button>
+  </div>
+</body>
+</html>

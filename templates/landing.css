@@ -1,0 +1,57 @@
+@font-face {
+  font-family: webfont;
+  src: url("imgs/fonts/PrintBold_TT.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  background-color: #004833;
+}
+
+#pagebody {
+  background-image: url('imgs/bg/home.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #004833;
+  height: 100%;
+  padding: 20px;
+}
+
+h1, h3{
+  text-align: center;
+  color: white;
+  font-style: normal;
+  font-family: webfont;
+  display: block;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#middlediv {
+  margin: auto;
+  width: 580px;
+  padding: none;
+}
+
+button {
+  margin: 20px;
+  display: inline;
+  margin-bottom: 20px;
+  font-family: webfont;
+  background-color: forestgreen;
+  width: 150px;
+  font-size: 20px;
+  color: white;
+  height: 40px;
+  border-radius: 10px;
+}

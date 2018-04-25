@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>bud to blossom</title>
+  <link rel="stylesheet" href="calendar.css" />
+  <link rel="stylesheet" href="libraries/jsCalendar/source/jsCalendar.css">
+  <link rel="stylesheet" href="libraries/jsCalendar/source/jsCalendar.clean.css">
+  <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+  <script src="libraries/jsCalendar/source/jsCalendar.js"></script>
+  <script src="libraries/jsCalendar/source/jsCalendar.lang.de.js"></script>
+  <script src="calendar.js" type="text/javascript"></script>
+  <script src="libraries/canvas.js-2.1/canvasjs.min.js"></script>
+</head>
+<body>
+  <div id="header">
+    <img src="imgs/misc/logo.png" alt="blossom logo" id="headerlogo">
+    <ul id="pages">
+      <li id="calheader"><a href="calendar">calendar</a></li>
+      <li id="etheader"><a href="tracker">emotion tracker</a></li>
+      <li id="yjheader"><a href="jungle">your jungle</a></li>
+      <li id="logout"><a href="logout">logout</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="pagebody">
+    <div id="main">
+        <div id="left">
+        <h1>Calendar</h1>
+        <div id="my-calendar" class="clean-theme"></div>
+        </div>
+        <div id="data">
+            <div id="settings">
+                <h3 id="select"> Select View: </h3>
+                <form id="times">
+                    <div class="container">
+                        <input class="button" id="day" type="radio" name="time" value="day" checked>
+                        <label for="day"> Day </label>
+                        <!-- <span class="clickArea"></span> -->
+                        </div>
+
+                    <div class="container">
+                        <input class="button" id="month" type="radio" name="time" value="month">
+                        <label for="month"> Month </label>
+                       <!--  <span class="clickArea"></span> -->
+                    </div>
+                </form>
+
+                <!-- this should only show up on month view
+                Select Emotion:
+                <form id="emotions">
+                  <input type="radio" name="emotion" value="positive" checked> Positive
+                  <input type="radio" name="emotion" value="negative"> Negative<br>
+                </form> -->
+            </div>
+
+            <!-- this should only show up on month view -->
+            <div id="monthView">
+                <h2 class="header" id="monthHeader">Overview of {{month}} </h2>
+                    <div id="Line Graph">
+                    <h2 class="graphHeader">Day to Day</h2>
+                        <div id="lineContainer" style="height: 280px; max-width: 920px; margin: 0px auto;"></div>
+                    </div>
+                    <div id="Bar Graph">
+                    <h2 class="graphHeader">Emotions Logged This Month</h2>
+                        <div id="barContainer" style="height: 280px; max-width: 920px; margin: 0px auto;"></div>
+                    </div>
+            </div>
+
+            <!-- this should only show up on day view -->
+            <div id="dayView">
+                <h2 class="header" id="dayHeader">Overview of {{day}}</h2>
+                <div id=entries>
+
+                </div>
+<!--                 divs are added as entries are added -->
+
+<!--                     <div id="emotionsList">
+                        <h3>Emotions Logged: </h3>
+                            <ul id="emotionsUL">
+                            </ul>
+                    </div>
+
+                    <div id="responses">
+                        <h3>Your Responses: </h3>
+                    </div> -->
+            </div>
+
+        </div>
+    </div>
+  </div>
+</body>
+</html>

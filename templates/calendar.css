@@ -1,0 +1,168 @@
+@font-face {
+  font-family: webfont;
+  src: url("imgs/fonts/PrintBold_TT.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+/*body {
+  background-color: lightgray;
+}*/
+
+#header {
+  height: 80px;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+#pagebody {
+  background: linear-gradient(#4B7D33, #8DC072);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 40px;
+}
+
+#headerlogo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 20px;
+  display: inline;
+  margin-right: 0px;
+}
+
+#pages {
+  color: dimgray;
+  list-style: none;
+  font-family: webfont;
+  font-size: 25px;
+  display: inline;
+  padding-left: 10px;
+}
+
+#pages li a {
+  color: dimgray;
+  text-decoration: none;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages li a:hover {
+  color: black;
+}
+
+#pages li{
+  display: inline;
+  margin-right: 20px;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages #calheader{
+  color: black;
+}
+
+#logout {
+  float: right;
+}
+
+h1 {
+  margin-left: 40px;
+  font-family: webfont;
+  color: white;
+  font-size: 50px;
+}
+
+/*mindy's code starts here*/
+
+body {
+    margin: auto;
+    color: white;
+    font-style: normal;
+    font-family: webfont;
+    display: block;
+}
+
+h2 {
+  text-align: center;
+}
+
+.graphHeader {
+  font-size: 20px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#settings {
+    display: inline;
+}
+
+#dayView {
+    display: block;
+    padding-top: 15px;
+}
+
+#monthView {
+    display: none;
+    padding-top: 15px;
+}
+
+.container {
+    width: 90px;
+    height: 24px;
+    text-align: center;
+    margin: 20px;
+    border-style: solid;
+    border-color: #194633;
+    display: inline;
+}
+
+.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+}
+
+#day {
+    width: 104px;
+}
+
+#month {
+    width: 113px;
+}
+
+#select {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    padding: 2px 36px 0px 36px;
+}
+
+.container:hover {
+    background-color: #194633;
+}
+
+/*new as of today 4/23*/
+
+/*add a label:selected*/
+
+#entries {
+  background-color: #a3ce8c;
+  padding: 20px;
+  font-size: 25px;
+  color: grey;
+}
+
+#data {
+  padding-top: 30px;
+}
+

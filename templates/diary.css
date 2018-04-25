@@ -1,0 +1,155 @@
+@font-face {
+  font-family: webfont;
+  src: url("imgs/fonts/PrintBold_TT.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  background-color: #004833;
+}
+
+#header {
+  height: 80px;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+#pagebody {
+  background-image: url('imgs/bg/diary.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #004833;
+  height: 100%;
+  padding: 20px;
+}
+
+#headerlogo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 20px;
+  display: inline;
+  margin-right: 0px;
+}
+
+#pages {
+  color: dimgray;
+  list-style: none;
+  font-family: webfont;
+  font-size: 25px;
+  display: inline;
+  padding-left: 10px;
+}
+
+#pages li a {
+  color: dimgray;
+  text-decoration: none;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages li a:hover {
+  color: black;
+}
+
+#pages li{
+  display: inline;
+  margin-right: 20px;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages #etheader{
+  color: black;
+}
+
+#logout {
+  float: right;
+}
+
+h1 {
+  font-family: webfont;
+  color: white;
+  font-size: 50px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: webfont;
+  color: white;
+  font-size: 20px;
+}
+
+#leftcol {
+  display: inline;
+  width: 40%;
+  margin: 20px;
+  float: left;
+  margin-top: 60px;
+}
+
+#leftcol img {
+  display: inline-block;
+  margin: auto;
+  height: 100px;
+}
+
+#rightcol {
+  display: inline;
+  width: 50%;
+  margin-right: 20px;
+  float: right;
+  margin-top: 40px;
+}
+
+#leftcol h3 {
+  font-family: webfont;
+  color: white;
+  font-size: 25px;
+}
+
+#rightcol h3 {
+  font-family: webfont;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+#rightcol select {
+  font-size: 15px;
+  margin: 0px;
+}
+
+#rightcol form {
+  font-size: 20px;
+  color: white;
+  font-family: webfont;
+}
+
+#rightcol textarea {
+  font-size: 20px;
+  color: gray;
+  font-family: webfont;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#done {
+  margin-top: 20px;
+  font-size: 24px;
+  background-color: seagreen;
+  color: white;
+  border-radius: 12px;
+  height: 30px;
+  width: 80px;
+  font-family: webfont;
+  display: block;
+  margin: 30px auto;
+}

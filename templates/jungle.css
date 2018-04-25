@@ -1,0 +1,71 @@
+@font-face {
+  font-family: webfont;
+  src: url("imgs/fonts/PrintBold_TT.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#header {
+  height: 80px;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+#pagebody {
+  background-image: url('imgs/bg/jungle.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #004833;
+  height: 100%;
+  padding: 20px;
+}
+
+#headerlogo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 20px;
+  display: inline;
+  margin-right: 0px;
+}
+
+#pages {
+  color: dimgray;
+  list-style: none;
+  font-family: webfont;
+  font-size: 25px;
+  display: inline;
+  padding-left: 10px;
+}
+
+#pages li a {
+  color: dimgray;
+  text-decoration: none;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages li a:hover {
+  color: black;
+}
+
+#pages li{
+  display: inline;
+  margin-right: 20px;
+  line-height: 80px;
+  vertical-align: top;
+}
+
+#pages #yjheader{
+  color: black;
+}
+
+#logout {
+  float: right;
+}

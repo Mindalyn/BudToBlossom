@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>bud to blossom</title>
+  <link rel="stylesheet" href="diary.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    function submit() {
+      //store the data in the database
+
+      //redirect to calendar
+      $.get("/calendar", function(data) {
+        window.location.href = "/calendar";
+      });
+    }
+
+
+  </script>
+</head>
+<body>
+  <div id="header">
+    <img src="imgs/misc/logo.png" alt="blossom logo" id="headerlogo">
+    <ul id="pages">
+      <li id="calheader"><a href="calendar">calendar</a></li>
+      <li id="etheader"><a href="tracker">emotion tracker</a></li>
+      <li id="yjheader"><a href="jungle">your jungle</a></li>
+      <li id="logout"><a href="logout">logout</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="pagebody">
+    <div id="leftcol">
+      <h1>you chose:</h1>
+      {{#moods}}
+        <img src="imgs/ems/{{emo}}.png" alt="{{emo}}" class="chosenemo">
+      {{/moods}}
+      <h3>please write about the emotions that you chose,
+        and then feel free to go take care of your jungle</h3>
+    </div>
+    <div id="rightcol">
+      <h3>where are you?</h3>
+      <select id="q1a">
+        <option value="school">school</option>
+        <option value="home">home</option>
+        <option value="bus">bus</option>
+        <option value="cafeteria">cafeteria</option>
+        <option value="friensd">friend's house</option>
+        <option value="playground">playground</option>
+        <option value="other">other</option>
+      </select>
+      <h3>what did you do to deal with this?</h3>
+      <select id="q2a">
+        <option value="run">run/exercise</option>
+        <option value="parent">talk to parent</option>
+        <option value="friend">talk to friend</option>
+        <option value="draw">draw</option>
+        <option value="journal">journal</option>
+        <option value="nothing">nothing</option>
+        <option value="other">other</option>
+      </select>
+      <h3>When you feel bad, its a good idea to talk to an adult. Will you do that?</h3>
+      <form id="q3a">
+        <input type="radio" name="yesno" value="yes"> yes
+        <input type="radio" name="yesno" value="no"> no
+      </form>
+      <h3>How have your emotions changed since last time?</h3>
+      <textarea id="q4a"></textarea>
+      <button tag="button" id="done" onclick="submit()">done</button>
+    </div>
+</body>
+</html>

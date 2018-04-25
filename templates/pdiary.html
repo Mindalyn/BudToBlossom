@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>bud to blossom</title>
+  <link rel="stylesheet" href="diary.css" />
+</head>
+<body>
+  <div id="header">
+    <img src="imgs/misc/logo.png" alt="blossom logo" id="headerlogo">
+    <ul id="pages">
+      <li id="calheader"><a href="calendar">calendar</a></li>
+      <li id="etheader"><a href="tracker">emotion tracker</a></li>
+      <li id="yjheader"><a href="jungle">your jungle</a></li>
+      <li id="logout"><a href="logout">logout</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="pagebody">
+    <div id="leftcol">
+      <h1>you chose:</h1>
+      {{#moods}}
+        <img src="imgs/ems/{{emo}}.png" alt="{{emo}}" class="chosenemo">
+      {{/moods}}
+      <h3>please write about the emotions that you chose,
+        and then feel free to go take care of your jungle</h3>
+    </div>
+    <div id="rightcol">
+      <h3>where are you?</h3>
+      <select id="q1a">
+        <option value="school">school</option>
+        <option value="home">home</option>
+        <option value="bus">bus</option>
+        <option value="cafeteria">cafeteria</option>
+        <option value="friensd">friend's house</option>
+        <option value="playground">playground</option>
+        <option value="other">other</option>
+      </select>
+      <h3>what are you doing?</h3>
+      <select id="q2a">
+        <option value="run">running/exercising</option>
+        <option value="friends">with friends</option>
+        <option value="family">with family</option>
+        <option value="reading">reading</option>
+        <option value="drawing">drawing</option>
+        <option value="nothing">nothing</option>
+        <option value="other">other</option>
+      </select>
+      <button tag="button" id="done">done</button>
+    </div>
+</body>
+</html>
